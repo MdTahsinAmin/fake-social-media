@@ -19,7 +19,7 @@ const Review = () => {
       },[])
     
     // Comment
-    const [commentor ,setCommnetor] = useState([]);
+    const  [commentor ,setCommnetor] = useState([]);
     useEffect(()=>{
        const url =`https://jsonplaceholder.typicode.com/comments?postId=${postId}`;
        
@@ -28,9 +28,11 @@ const Review = () => {
        .then(data => setCommnetor(data));
        
     },[])
-    
-   // count 
+
+   // Comment id
+   const commentorId = commentor.map((comment =>(comment.id)));
    
+   // count 
    let count = 5;
 
    const [images , setImages] = useState([]);
@@ -41,16 +43,27 @@ const Review = () => {
        .then(response => response.json())
        .then(data =>setImages(data.results));
    },[])
-   
-   commentor.img = "";
+  
+   // userImages
+
+   const userImages = images.map(image => image.picture.large);
+
    
    // comment and image
 
-   for(let i = 0 ; i < images.length;i++){
-       commentor[i].img = images[i].picture.large;
-   }
-   //console.log(commentor);
+   let j = 0;
+   const newCommentor = commentorId.map(id =>{
+     
+      const comments = commentor.find(comment => comment.id === id)
 
+      if(j<=userImages.length){
+          comments.img = userImages[j];
+          j++;
+      }
+    return comments;
+   }) 
+
+   
     return (
         <div>
             <h1 className='header'>Post Id : {postId}</h1>
@@ -60,7 +73,7 @@ const Review = () => {
              <span className="color-bar"></span>
              <div className='commentor-section'>
              {
-                commentor.map(comment => <UserComent comment={comment} key ={comment.id}></UserComent>)
+                 newCommentor.map(comment => <UserComent comment={comment} key ={comment.id}></UserComent>)
              }
              </div>
 

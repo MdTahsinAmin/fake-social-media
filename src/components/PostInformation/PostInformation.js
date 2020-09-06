@@ -26,8 +26,7 @@ const PostInformation = (props) => {
       
         <div className='card-container'>   
              <div className='information-container'>
-              <h2>Id : {id}</h2>
-              <h4>Title : {title}</h4>
+              <h2>Title : {title}</h2>
               <p>{body}</p>
               <Button onClick={()=>{handleHistory(props.post.id)}}
         variant="contained"
