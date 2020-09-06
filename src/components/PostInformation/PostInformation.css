@@ -1,0 +1,18 @@
+
+.card-container{
+   margin-top:10px;
+   border: none;
+   background-image: linear-gradient(to right , rgb(81, 105, 158) , rgb(73, 206, 40));
+   border-radius:5px;
+   padding-left: 10px;
+   padding-top: 10px;
+   padding-bottom:10px;
+   
+   margin-left: -20px;
+  box-shadow: 10px 10px 50px darkgrey;
+}
+.information-container{
+    font-size: 16px;
+    color: #FFF;
+    text-align: center;
+}

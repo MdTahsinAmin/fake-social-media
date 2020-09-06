@@ -1,0 +1,13 @@
+.container{
+    border-bottom: 1px solid lightgray;
+    border-radius:5px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px grey;
+}
+.commnetor-information{
+    text-align: center;
+}
+.commnetor-img{
+   margin-left: 650px;
+}

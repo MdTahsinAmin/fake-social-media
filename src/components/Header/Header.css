@@ -1,0 +1,16 @@
+.T-logo{
+    height: 30px;
+    margin-right:5px ;
+    margin-top:10px;
+}
+nav{
+    line-height: 40px;
+    font-size: 20px;
+    margin-left: 180px;
+}
+nav a{
+    text-decoration: none;
+    color:#FFF;
+    margin-right: 20px;
+    padding:5px;
+}

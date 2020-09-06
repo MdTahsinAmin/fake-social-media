@@ -1,0 +1,22 @@
+.post-continer{
+    margin-top:10px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+.header{
+    text-align:center;
+    margin: 0 auto;
+    color:lightblue;
+}
+.grid-container{
+    text-align:center;
+}
+.color-bar{
+        display: block;
+        margin: 0 auto;
+        width: 130px;
+        height: 5px;
+        border-radius: 10px;
+        background-image: linear-gradient(to right, #78a2c5, #4f19e2);
+        text-align: center; 
+}
